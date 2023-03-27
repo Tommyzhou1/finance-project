@@ -5,7 +5,7 @@ FROM openjdk:11
 WORKDIR /app
 
 # Copy the JAR file built with 'mvn package' into the container
-COPY target/personal-finance-app-*.jar app.jar
+COPY target/personal-finance-app-*.jar /
 
 # Expose the port your app runs on
 EXPOSE 8080
