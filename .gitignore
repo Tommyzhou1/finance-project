@@ -7,7 +7,6 @@
 .idea/
 
 # Backend (Spring Boot)
-/backend/target/
 /backend/.mvn/
 /backend/.gradle/
 /backend/.settings/
