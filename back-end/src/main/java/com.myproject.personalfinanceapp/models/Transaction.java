@@ -3,6 +3,8 @@ package com.myproject.personalfinanceapp.models;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.Optional;
@@ -13,7 +15,9 @@ public class Transaction {
 
     @Id
     private UUID id = UUID.randomUUID();
+    @NotEmpty(message = "The full description is required.")
     private String description;
+    @NotNull(message = "The amount spent is required.")
     private BigDecimal amount;
     private Optional<CurrencyType> type;
     private LocalDate date = LocalDate.now();
