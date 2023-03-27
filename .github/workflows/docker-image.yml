@@ -29,4 +29,4 @@ jobs:
       with:
         context: ./back-end
         push: true
-        tags: your-image-name:latest
+        tags: zhougaox/personal-finance-project-hub:your-image-name:latest
